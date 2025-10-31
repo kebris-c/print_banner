@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: kebris-c <kebris-c@student.42madrid.c      +#+  +:+       +#+         #
+#    By: kebris-c <kebris-c@student.42madrid.com    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/09/08 13:07:54 by kebris-c          #+#    #+#              #
-#    Updated: 2025/10/30 14:57:04 by kebris-c         ###   ########.fr        #
+#    Updated: 2025/10/31 17:35:36 by kebris-c         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -24,7 +24,7 @@ SHELL := /bin/bash
 #	Notes:
 #		P = PROJECT ; B = BONUS ; N = NAME of it's library *.a
 #
-PROJECT		= printf_banner
+PROJECT		= print_banner
 P_BONUS		= $(PROJECT)_bonus
 P_RIGOR		= $(PROJECT)_rigor
 P_B_RIGOR	= $(PROJECT)_rigor_bonus
@@ -105,6 +105,7 @@ B_DEPS_DIR		= bonus/deps/
 # If there is Libft
 #
 LIB_DIR			= libft/
+LIB				= $(LIB_DIR)libft.a
 L_SRC_DIR		= libft/src/
 L_INCL_DIR		= libft/include/
 L_OBJS_DIR		= libft/objs/
@@ -112,13 +113,21 @@ L_DEPS_DIR		= libft/deps/
 
 # 🎯 Sources, Objects and Deps	! Remember to update the list wvery project
 #
-SRCS	= so_long.c \
-		  game.c \
-		  utils.c \
-		  check_valid_route.c \
-		  map_checker.c \
-		  map_load.c \
-		  textures_load.c
+SRCS	= \
+		append_digits.c \
+		append_letters.c \
+		create_font_dict.c \
+		main.c \
+		node_2_to_5.c \
+		node_6_to_9.c \
+		node_c_to_f.c \
+		node_g_to_j.c \
+		node_k_to_n.c \
+		node_o_to_r.c \
+		node_s_to_v.c \
+		node_w_to_z.c \
+		print_banner.c \
+		utils.c
 OBJS	= $(patsubst %.c,$(OBJS_DIR)%.o,$(SRCS))
 DEPS	= $(patsubst $(OBJS_DIR)%.o,$(DEPS_DIR)%.d,$(OBJS))
 # And if there is bonus...
@@ -359,12 +368,12 @@ $(B_OBJS_DIR)%.o: $(B_SRC_DIR)%.c | setup
 #	Cleaners
 #
 clean:
-	@$(RM) $(OBJS) $(B_OBJS) $(DEPS) $(B_DEPS)
+	@$(RM) $(OBJS_DIR) $(B_OBJS_DIR) $(DEPS_DIR) $(B_DEPS_DIR) $(L_OBJS_DIR) $(L_DEPS_DIR)
 
 fclean: clean
-	@$(RM) $(NAME) $(N_BONUS) $(N_DBG) $(N_B_DBG) $(N_RIGOR) $(N_B_RIGOR) $(N_GDB) $(N_B_GDB) \
-		$(PROJECT) $(P_BONUS) $(P_DBG) $(P_B_DBG) $(P_RIGOR) $(P_B_RIGOR) $(P_GDB) $(P_B_GDB) \
-		$(OBJS_DIR) $(DEPS_DIR) $(B_OBJS_DIR) $(B_DEPS_DIR)
+	@$(RM) \
+		$(NAME) $(LIB) $(N_BONUS) $(N_DBG) $(N_B_DBG) $(N_RIGOR) $(N_B_RIGOR) $(N_GDB) $(N_B_GDB) \
+		$(PROJECT) $(P_BONUS) $(P_DBG) $(P_B_DBG) $(P_RIGOR) $(P_B_RIGOR) $(P_GDB) $(P_B_GDB)
 
 #	Reworks from zero
 #
