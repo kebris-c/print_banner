@@ -1,6 +1,6 @@
 # 🦉 Banner
 
-**Print Banner** is a lightweight C utility that prints custom banners in the terminal using ASCII art and ANSI colors.  
+**Banner** is a lightweight C utility that prints custom banners in the terminal using ASCII art and ANSI colors.  
 It’s designed to make your project headers or startup messages stand out with a clean, colorful style.
 
 ---
