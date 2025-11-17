@@ -1,45 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   utils.c                                            :+:      :+:    :+:   */
+/*   node_owl_.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: kebris-c <kebris-c@student.42madrid.c      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/11/03 12:16:42 by kebris-c          #+#    #+#             */
-/*   Updated: 2025/11/03 12:16:44 by kebris-c         ###   ########.fr       */
+/*   Created: 2025/11/03 16:48:05 by kebris-c          #+#    #+#             */
+/*   Updated: 2025/11/03 17:07:45 by kebris-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "banner.h"
 
-void	free_font_dict(t_font_dict *dict)
-{
-	t_font_dict	*tmp;
-
-	while (dict)
-	{
-		ft_free_matrix(dict->lines);
-		tmp = dict->next;
-		free(dict);
-		dict = tmp;
-	}
-}
-
-t_font_dict	*new_font_node(char c, char **lines)
+t_font_dict	*node_owl_(void)
 {
 	t_font_dict	*node;
-	int			line;
 
 	node = malloc(sizeof(*node));
 	if (!node)
 		return (NULL);
-	node->ch = c;
-	line = 0;
-	while (line < 6)
-	{
-		node->lines[line] = lines[line];
-		line++;
-	}
+	node->lines = malloc(sizeof(*node->lines) * 6);
+	if (!node->lines)
+		return (free(node), NULL);
+	node->lines[0] = ft_strdup(" ,_, ");
+	node->lines[1] = ft_strdup("(0v0)");
+	node->lines[2] = ft_strdup("(   )");
+	node->lines[3] = ft_strdup(" \"\"\" ");
+	node->lines[4] = ft_strdup("/|_|\\");
+	node->lines[5] = ft_strdup(" \" \" ");
 	node->next = NULL;
 	return (node);
 }

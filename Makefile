@@ -6,7 +6,7 @@
 #    By: kebris-c <kebris-c@student.42madrid.com    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/09/08 13:07:54 by kebris-c          #+#    #+#              #
-#    Updated: 2025/10/31 17:35:36 by kebris-c         ###   ########.fr        #
+#    Updated: 2025/11/03 17:06:36 by kebris-c         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -126,6 +126,7 @@ SRCS	= \
 		node_o_to_r.c \
 		node_s_to_v.c \
 		node_w_to_z.c \
+		node_owl_.c \
 		print_banner.c \
 		utils.c
 OBJS	= $(patsubst %.c,$(OBJS_DIR)%.o,$(SRCS))

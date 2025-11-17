@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   append_digits.c                                    :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: kebris-c <kebris-c@student.42madrid.c      +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2025/11/03 12:15:48 by kebris-c          #+#    #+#             */
+/*   Updated: 2025/11/03 12:15:50 by kebris-c         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "banner.h"
 
 static t_font_dict	*node_0_(char digit)
@@ -61,7 +73,6 @@ static t_font_dict	*digits_parser(char digit)
 
 t_font_dict	*append_digits(t_font_dict *head)
 {
-	t_font_dict	*tmp;
 	t_font_dict	*node;
 	char		digit;
 

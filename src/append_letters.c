@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   append_letters.c                                   :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: kebris-c <kebris-c@student.42madrid.c      +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2025/11/03 12:15:55 by kebris-c          #+#    #+#             */
+/*   Updated: 2025/11/03 12:15:56 by kebris-c         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "banner.h"
 
 static t_font_dict	*node_a_(char letter)
@@ -69,7 +81,6 @@ static t_font_dict	*letters_parser(char letter)
 
 t_font_dict	*append_letters(t_font_dict *head)
 {
-	t_font_dict	*tmp;
 	t_font_dict	*node;
 	char		letter;
 

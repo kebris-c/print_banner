@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   node_o_to_r.c                                      :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: kebris-c <kebris-c@student.42madrid.c      +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2025/11/03 12:16:27 by kebris-c          #+#    #+#             */
+/*   Updated: 2025/11/03 12:16:29 by kebris-c         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "banner.h"
 
 static t_font_dict	*node_o_(char letter)
@@ -11,7 +23,7 @@ static t_font_dict	*node_o_(char letter)
 		return (NULL);
 	node->ch = letter;
 	node->lines = malloc(sizeof(*node->lines) * 6);
-	if (!nodes->lines)
+	if (!node->lines)
 		return (free(node), NULL);
 	node->lines[0] = ft_strdup(" ██████╗ ");
 	node->lines[1] = ft_strdup("██╔═══██╗");
@@ -34,7 +46,7 @@ static t_font_dict	*node_p_(char letter)
 		return (NULL);
 	node->ch = letter;
 	node->lines = malloc(sizeof(*node->lines) * 6);
-	if (!nodes->lines)
+	if (!node->lines)
 		return (free(node), NULL);
 	node->lines[0] = ft_strdup("██████╗ ");
 	node->lines[1] = ft_strdup("██╔══██╗");
@@ -57,7 +69,7 @@ static t_font_dict	*node_q_(char letter)
 		return (NULL);
 	node->ch = letter;
 	node->lines = malloc(sizeof(*node->lines) * 6);
-	if (!nodes->lines)
+	if (!node->lines)
 		return (free(node), NULL);
 	node->lines[0] = ft_strdup(" ██████╗ ");
 	node->lines[1] = ft_strdup("██╔═══██╗");
@@ -80,7 +92,7 @@ static t_font_dict	*node_r_(char letter)
 		return (NULL);
 	node->ch = letter;
 	node->lines = malloc(sizeof(*node->lines) * 6);
-	if (!nodes->lines)
+	if (!node->lines)
 		return (free(node), NULL);
 	node->lines[0] = ft_strdup("██████╗ ");
 	node->lines[1] = ft_strdup("██╔══██╗");
