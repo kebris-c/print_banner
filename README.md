@@ -1,4 +1,4 @@
-# 🦉 Print Banner
+# 🦉 Banner
 
 **Print Banner** is a lightweight C utility that prints custom banners in the terminal using ASCII art and ANSI colors.  
 It’s designed to make your project headers or startup messages stand out with a clean, colorful style.
@@ -7,7 +7,7 @@ It’s designed to make your project headers or startup messages stand out with 
 
 ## 📜 Description
 
-The main function, `print_banner()`, takes a string as an argument and displays:
+The main function, `ft_banner()`, takes a string as an argument and displays:
 
 - The project name or custom text in **Shadow-style ASCII art**  
 - A small **owl drawing** below the text  
@@ -38,17 +38,16 @@ Example output:
 
 ```
 
-print_banner/
+banner/
 ├── include/
 │   └── banner.h              # Prototypes and color defines
 ├── src/
-│   ├── print_banner.c        # Main function
+│   ├── ft_banner.c        # Main function
 │   ├── create_font_dict_a_to_m.c
 │   ├── create_font_dict_n_to_z.c
 │   ├── create_font_dict_numbers.c
 │   ├── font_utils.c          # new_font_node() and free_font_dict()
 │   └── ...                   # Additional helper files
-├── main.c                    # Optional test entry point
 └── Makefile
 
 ````
@@ -79,7 +78,7 @@ Example test file (`main.c`):
 
 int main(void)
 {
-    print_banner("My_Project");
+    ft_banner("My_Project");
     return (0);
 }
 ```
@@ -87,7 +86,7 @@ int main(void)
 Run it:
 
 ```bash
-./print_banner
+./banner
 ```
 
 ---
